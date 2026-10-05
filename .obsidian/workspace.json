@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f3be2930ccc844db",
+        "id": "a577b0060259bac3",
         "type": "tabs",
         "children": [
           {
-            "id": "ae1c49f4eca508ff",
+            "id": "19de8f405dddd797",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "b7e300decfbdaa22",
@@ -188,11 +189,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "ae1c49f4eca508ff",
+  "active": "19de8f405dddd797",
   "lastOpenFiles": [
+    "Graph Theory.md",
+    "Pasted image 20261005005154.png",
     "README.md",
     "Untitled.base",
-    "Graph Theory.md",
     "Welcome.md"
   ]
 }
