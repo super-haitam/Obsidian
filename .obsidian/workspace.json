@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java.md",
+                "file": "Software Engineering.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java"
+              "title": "Software Engineering"
             }
           }
         ]
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "b7e300decfbdaa22",
@@ -190,11 +191,13 @@
   },
   "active": "e147a72343b05f6c",
   "lastOpenFiles": [
+    "Pasted image 20261006225728.png",
+    "Pasted image 20261006225620.png",
+    "Java.md",
     "Welcome.md",
     "Software Engineering.md",
     "Untitled.canvas",
     "Untitled.md",
-    "Java.md",
     "Pasted image 20261005235004.png",
     "2026-10-05.md",
     "Graph Theory.md",
