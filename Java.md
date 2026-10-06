@@ -1,5 +1,5 @@
 # Records
-In **Java**, a record is a special, unrestricted class introduced in Java 14, designed to server as a pure **data carrier**. Getting rid of the useless stuff (boilerplate code) for classes created only for immutable classes.
+In **Java**, a record is a special, unrestricted class introduced in Java 14, designed to server as a pure **data carrier**. Getting rid of the useless stuff (boilerplate code) for classes created only for immutable classces.
 
 ## Functionality
 When a **record** is declared, Java automatically generates:
