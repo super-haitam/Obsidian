@@ -29,6 +29,7 @@ Draw a class diagram corresponding to the following situations.
 ## Exercise 2
 	A grocery store has some items sold by weight, and some per unit. Some items are taxable, while others are not. Some items have special prices when sold in groups (e.g. 3 for $2). Finally, some items have special prices if you have certain ‘membership cards’. There could be several different membership prices on the same item, but you can only use one membership card per purchase.
 
+- [ ] TODO
 # TODO List
 - [ ] Go over: ==🟠3.2 Modeling with UML Part 2.pdf
 - [ ] Exercice on page **37** 
