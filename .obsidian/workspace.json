@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a577b0060259bac3",
+        "id": "a128720c12c16806",
         "type": "tabs",
         "children": [
           {
-            "id": "e147a72343b05f6c",
+            "id": "6ab5d78578317f22",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -46,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorateur de fichiers"
             }
           },
           {
@@ -83,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b7e300decfbdaa22",
@@ -180,23 +179,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer un nouveau canvas": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "bases:Créer une nouvelle base": false
     }
   },
-  "active": "e147a72343b05f6c",
+  "active": "6ab5d78578317f22",
   "lastOpenFiles": [
+    "S5/Java.md",
     "S5/Graph Theory.md",
-    "S5",
+    "S5/Automata/The Mighty Pepper.md",
+    "Pasted image 20261010181731.png",
+    "^1.md",
+    "Sans titre.md",
+    "S5/Automata",
     "S5/Software Engineering.md",
+    "S5",
     "Pasted image 20261006225728.png",
     "Pasted image 20261006225620.png",
-    "S5/Java.md",
     "Welcome.md",
     "Untitled.canvas",
     "Untitled.md",
