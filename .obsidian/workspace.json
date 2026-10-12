@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cc612ccce456fb30",
+        "id": "be540a5cfa87591d",
         "type": "tabs",
         "children": [
           {
-            "id": "3cc3925fc98ba122",
+            "id": "daa7a23617948894",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -189,12 +189,14 @@
       "bases:Créer une nouvelle base": false
     }
   },
-  "active": "3cc3925fc98ba122",
+  "active": "daa7a23617948894",
   "lastOpenFiles": [
-    "Pasted image 20261011172040.png",
-    "Pasted image 20261011165210.png",
+    "img/Pasted image 20261011224819.png",
+    "Pasted image 20261011224819.png",
     "S5/Automata/The Mighty Pepper.md",
-    "Pasted image 20261011004920.png",
+    "img/Pasted image 20261011004920.png",
+    "img/Pasted image 20261011172040.png",
+    "img/Pasted image 20261011165210.png",
     "Pasted image 20261011004525.png",
     "img/Pasted image 20261005005154.png",
     "img",
@@ -209,7 +211,6 @@
     "Sans titre.md",
     "S5/Automata",
     "S5",
-    "Pasted image 20261006225620.png",
     "Welcome.md",
     "Untitled.canvas",
     "Untitled.md",

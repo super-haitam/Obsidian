@@ -15,6 +15,7 @@ Un **modèle symbolique** est une $\ll$abstraction finie$\gg$ de la dynamique de
 >Ainsi, un modele symbolique peut s'ecrire sous la forme suivante:
 >$$ \xi(t+1) \in g(\xi(t), \sigma(t)),\ \xi(t) \in \Xi,\ \sigma(t) \in \Sigma \tag{2}$$
 >ou $\xi(t)$ et $\sigma(t)$ denotent l'etat et la commande du modele symbolique a l'instant $t \in \mathbb{N},\ \Xi\ et\ \Sigma$ sont des ensembles finis.
+>^2
 
 On déduit que pour un état $\xi$ et une commande symbolique $\sigma$, $g(\xi, \sigma)$ et un sous-ensemble de $\Xi$ représentant l'ensemble des états successeurs potentiels.
 ## 1.1 Méthodologie d'abstraction symbolique
@@ -40,7 +41,7 @@ Les ensembles d'états et de commandes symboliques $\Xi$ et $\Sigma$ étant main
 Pour que le modèle symbolique soit utilisable pour synthétiser des contrôleurs pour le system décrit dans [[The Mighty Pepper#^1|(1)]], il faut que la dynamique symbolique capture l'ensemble des comportements possible de [[The Mighty Pepper#^1|(1)]].
 	Cela veut seulement dire qu'on doit avoir une bijection entre le modèle dynamique et symbolique concernant les états et commandes.
 
->[!note] Definition (3)
+>[!info] Definition (3)
 > Pour ce faire, il est nécessaire de calculer pour chaque $\xi \in \Xi,\ \sigma \in \Sigma$ un ensemble $\mathbb{Y}_{\xi,\sigma} \subseteq \mathbb{R}^{n_x}$ vérifiant l'inclusion ci-dessous:
 > $$ \mathbb{Y}_{\xi,\sigma} \supseteq f(cl(\mathbb{X}_\xi),u_\sigma,\mathbb{W}) := \{f(x, u_\sigma, w)\ |\ x \in cl(\mathbb{X}_\xi),\ w \in \mathbb{W}\} \tag{3}$$
 ou $cl(\mathbb{X}_{\xi,\sigma})$ denote l'adherence de l'ensemble $\mathbb{X}_\xi$ . 
@@ -102,4 +103,65 @@ Cette page répond a la question laissée ouverte en [[The Mighty Pepper#1. Abst
 
 >[!note] Remarque 3
 >L'approche decrite dans cette section peut etre appliquee pour tous les elements de la partition $\mathbb{X}_\xi$ avec $\xi \neq 0$. Pour $\xi = 0$, nous rappelons que $\mathbb{X}_0 = \mathbb{R}^{n_x} \setminus \mathbb{X}$. Il est d'usage dans ce cas particulier d'utiliser la surapproximation $f(cl(\mathbb{X}_0),u_\sigma,\mathbb{W}) \subseteq \mathbb{R}^{n_x}.$
-## 1.2 Contrôleur symbolique et concretisation
+## 1.2 Contrôleur symbolique et concrétisation
+
+>[!info] Contrôleur Symbolique
+>Un contrôleur est la règle qui décide quelle commande appliquer au système a chaque instant, en fonction de ce qu'il observe. Ici, il travail dans le monde symbolique : il recoit l'état symbolique $\xi(t)$ et renvoie une commande symbolique $\sigma(t)$.
+
+Considérons maintenant un contrôleur pour le modèle symbolique [[The Mighty Pepper#^2|(2)]] de la forme : ^6
+$$
+\begin{cases}
+\psi(t) = h_1(\psi(t-1),\ \xi(t)), \\
+\sigma(t) = h_2(\psi(t),\ \xi(t))
+\end{cases}
+\tag{6}
+$$
+ou $\psi(t) \in \Psi$ est une variable interne du contrôleur et $\Psi$ est un ensemble fini. 
+
+Ce contrôleur possède une mémoire représentée par la variable interne $\psi(t)$ et est donc un _contrôleur dynamique_. Le cas d'un _contrôleur statique_, c'est-a-dire sans mémoire, peut être vu comme un cas particulier ou $h_2(\psi,\xi)=h(\xi)$ . Dans ce cas, la commande symbolique $\sigma(t)=h(\xi(t))$ ne dépend que de l'état symbolique a l'instant $t$.
+
+On note $\mathcal{T}_{symb}(\xi_0)$ l'ensemble des trajectoires du système symbolique en boule fermée [[The Mighty Pepper#^2|(2)]]-[[The Mighty Pepper#^6|(6)]] avec la condition initiale $\xi(0)=\xi_0$, c'est un ensemble de *trajectoires entières*, c'est-a-dire de suites $\xi(0), \xi(1), \xi(2),...$ a valeurs dans $\Xi$. Formellement, $\mathcal{T}_{symb}(\xi_0)$ est l'ensemble des suites $\xi(\cdot)$ telles que :
+- $\xi(0)=\xi_0$
+- $\sigma(t)=h_2(\psi(t),\ \xi(t))$, avec $\psi(t)=h_1(\psi(t-1),\ \xi(t))$ (la commande vient du contrôleur);
+- $\xi(t+1) \in g(\xi(t),\ \sigma(t))$ pour tout $t \geq 0$. 
+Notons qu'il peut exister plusieurs trajectoires pour une condition initiale a cause du caractère multivalué de la fonction de transition $g$. Ceci est du au fait que $\xi^+$ a plusieurs choix comme élément de l'ensemble $g(\xi, \sigma)$.
+
+Nous décrivons maintenant la procédure de **concrétisation du contrôleur** [[The Mighty Pepper#^6|(6)]] qui nous permettra de contrôler le système dynamique [[The Mighty Pepper#^1|(1)]]. Ainsi, nous considérons le contrôleur suivant : ^7
+$$
+\begin{cases}
+\psi(t) = h_1(\psi(t-1),\ q(x(t))) \\
+u(t) = p(h_2(\psi(t),\ q(x(t))))
+\end{cases}
+\tag{7}
+$$
+ou $q : \mathbb{R}^{n_x} \rightarrow \Xi$ et $p : \Sigma \rightarrow \mathbb{R}^{n_u}$ sont les interfaces d'abstraction et de concrétisation définies en [[The Mighty Pepper#1. Abstraction symbolique d'un system complexe#1.1 Méthodologie d'abstraction symbolique#1.1.1 Discrétisation de l'état et de la commande|section 1.1.1]].
+
+On note $\mathcal{T}_{conc}(x_0)$ l'ensemble des trajectoires du système en boucle fermée [[The Mighty Pepper#^1|(1)]]-[[The Mighty Pepper#^7|(7)]] avec la condition initiale $x(0)=x_0$, c'est un ensemble de *trajectoires entières*, c'est-a-dire de suites $x(0),x(1),x(2),...$ a valeurs dans $\mathbb{X}$. Formellement, $\mathcal{T}_{conc}(x_0)$ est l'ensemble des suites $x(\cdot)$ telles que:
+- $x(0)=x_0$
+- $u(t)=p(h_2(\psi(t),\ q(x(t))))$, avec $\psi(t)=h_1(\psi(t-1),\ q(x(t)))$ ;
+- $x(t+1) = f(x(t), u(t), w(t))$ avec $w(t) \in \mathbb{W}$, pour tout $t \geq 0$.
+En raison de la présence de la perturbation $w(\cdot)$, il peut exister plusieurs trajectoires pour une condition initiales. On note aussi :
+$$ q(\mathcal{T}_{conc}(x_0)) = \{ \xi(\cdot)\ |\ \xi(\cdot) = q(x(\cdot)),\ x(\cdot) \in \mathcal{T}_{conc}(x_0) \} $$
+Cet ensemble correspond aux trajectoires du système en boucle fermée [[The Mighty Pepper#^1|(1)]]-[[The Mighty Pepper#^7|(7)]], observées via l'interface d'abstraction.
+
+Nous pouvons maintenant énonce le théorème fondamental du contrôle symbolique (voir également [[The Mighty Pepper#^figure4|figure 4]]).
+
+>[!note] Théorème 1
+>Pour tout $x_0\in\mathbb{R}^{n_x}$, on a $q(\mathcal{T}_{conc}(x_0)) \subseteq \mathcal{T}_{symb}(q(x_0))$. ^theorem1
+
+![[Pasted image 20261011224819.png]]
+*Figure 4 - Architecture de contrôle symbolique et illustration du théorème fondamental du control symbolique*^figure4
+
+Intuitivement, le [[The Mighty Pepper#^theorem1|théorème 1]] stipule que les trajectoires du système en boucle fermée [[The Mighty Pepper#^1|(1)]]-[[The Mighty Pepper#^7|(7)]] forment un sous-ensemble des trajectoires du système symbolique en boucle fermée [[The Mighty Pepper#^2|(2)]]-[[The Mighty Pepper#^6|(6)]].
+
+Cela implique que si un contrôleur symbolique [[The Mighty Pepper#^6|(6)]] synthétisé comme dans la [[The Mighty Pepper#^section2|section 2]] permet au modèle symbolique en boucle fermée de satisfaire des spécifications données, alors le contrôleur concrétisé [[The Mighty Pepper#^7|(7)]] permettra aussi au système initial en boucle fermée de satisfaire les mêmes spécifications.
+
+Notez toutefois que l'échec de synthèse d'un contrôleur symbolique n'implique pas pour autant que le système initial est incapable de satisfaire les spécifications (contrairement aux abstractions complètes évoquées dans la section 4.2). 
+
+En effet, puisque l'étape d'abstraction symbolique s'appuie sur des méthodes de surapproximation du système [[The Mighty Pepper#^1|(1)]], cet échec peut être dû au fait d'avoir créé un modèle symbolique trop grossier pour capturer les comportements importants du système, ou à la présence de trop nombreuses transitions d'un état symbolique vers lui-même qui empêchent la progression du modèle symbolique vers les objectifs de contrôle. Ces problèmes peuvent parfois être résolus en adaptant les paramètres de discrétisation du système dans la [[The Mighty Pepper#1. Abstraction symbolique d'un system complexe#1.1 Méthodologie d'abstraction symbolique#1.1.1 Discrétisation de l'état et de la commande|section 1.1.1]] (voir remarque 1 et section 4.1.1).
+
+>[!info] A retenir
+>- Un modèle symbolique est un système dynamique dont les ensembles d'états $\Xi$ et de commandes $\Sigma$ sont des ensembles finis, et qui représente une *abstraction* d'un système dynamique continu.
+>- Un modèle symbolique peut être calculé par partition de l'espace des états $\mathbb{X}$, discrétisation de l'espace des commandes $\mathbb{U}$, et **surapproximation** des ensembles atteignables $\mathbb{Y}_{\xi,\sigma}$ .
+>- Un contrôleur symbolique peut être *concretisé* de manière à ce que l'ensemble des trajectoires du système continu en boucle fermée soit inclus dans l'ensemble des trajectoires du modèle symbolique en boucle fermée.
+# 2. Synthèse d'un contrôleur symbolique ^section2
