@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "be540a5cfa87591d",
+        "id": "76a4b762e3aeae25",
         "type": "tabs",
         "children": [
           {
-            "id": "daa7a23617948894",
+            "id": "e67e5faf50fe1c2a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "S5/Automata/The Mighty Pepper.md",
+                "file": "S5/Graph/Exam Prep/3 Days Left.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Mighty Pepper"
+              "title": "3 Days Left"
             }
           }
         ]
@@ -46,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorateur de fichiers"
+              "title": "Files"
             }
           },
           {
@@ -83,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b7e300decfbdaa22",
@@ -180,20 +179,27 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Ouvrir le sélecteur rapide": false,
-      "graph:Ouvrir la vue graphique": false,
-      "canvas:Créer un nouveau canvas": false,
-      "daily-notes:Ouvrir la note quotidienne": false,
-      "templates:Insérer le modèle": false,
-      "command-palette:Ouvrir la palette de commandes": false,
-      "bases:Créer une nouvelle base": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "daa7a23617948894",
+  "active": "e67e5faf50fe1c2a",
   "lastOpenFiles": [
+    "file:C:/Users/Student/Downloads/solid-lab_HaitamLaghmam/solid-lab/parking-answers.md",
+    "S5/Graph/Exam Prep/3 Days Left.md",
+    "S5/Graph/Graph Theory.md",
+    "file:C:/Users/Student/Downloads/solid-lab with parking/solid-lab/parking-answers.md",
+    "file:C:/Users/Student/Downloads/solid-lab with parking/solid-lab/answers.md",
+    "S5/Graph/Exam Prep",
+    "S5/Graph",
+    "S5/Automata/The Mighty Pepper.md",
     "img/Pasted image 20261011224819.png",
     "Pasted image 20261011224819.png",
-    "S5/Automata/The Mighty Pepper.md",
     "img/Pasted image 20261011004920.png",
     "img/Pasted image 20261011172040.png",
     "img/Pasted image 20261011165210.png",
@@ -205,8 +211,6 @@
     "img/Pasted image 20261011004132.png",
     "S5/Software Engineering.md",
     "S5/Java.md",
-    "S5/Graph Theory.md",
-    "Pasted image 20261010181731.png",
     "^1.md",
     "Sans titre.md",
     "S5/Automata",
