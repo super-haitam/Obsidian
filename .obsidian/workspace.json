@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "S5/Graph/Exam Prep/3 Days Left.md",
+                "file": "S5/Graph/Exam Prep/2 Days Left.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 Days Left"
+              "title": "2 Days Left"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 213.5
   },
   "right": {
     "id": "b7e300decfbdaa22",
@@ -190,9 +190,10 @@
   },
   "active": "e67e5faf50fe1c2a",
   "lastOpenFiles": [
-    "file:C:/Users/Student/Downloads/solid-lab_HaitamLaghmam/solid-lab/parking-answers.md",
-    "S5/Graph/Exam Prep/3 Days Left.md",
     "S5/Graph/Graph Theory.md",
+    "S5/Graph/Exam Prep/2 Days Left.md",
+    "S5/Graph/Exam Prep/3 Days Left.md",
+    "file:C:/Users/Student/Downloads/solid-lab_HaitamLaghmam/solid-lab/parking-answers.md",
     "file:C:/Users/Student/Downloads/solid-lab with parking/solid-lab/parking-answers.md",
     "file:C:/Users/Student/Downloads/solid-lab with parking/solid-lab/answers.md",
     "S5/Graph/Exam Prep",

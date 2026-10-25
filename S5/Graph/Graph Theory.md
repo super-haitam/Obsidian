@@ -16,7 +16,7 @@ Let u and v be two different vertices in a **Peterson Graph**. If they are nonad
 ## Connection in graphs
 ### Recall
 A **path** is a simple graph whose vertices are adjacent *if and only if* they appear consecutively in the list.
-A **cycle** is a graph with equal number of vertices and edges whole vertices can be placed around a circle so that two vertices are adjacent *if and only if* they appear consecutively around the circle.
+A **cycle** is a graph with equal number of vertices and edges whose vertices can be placed around a circle so that two vertices are adjacent *if and only if* they appear consecutively around the circle. Thus, vertices can repeat along the circle.
 A **walk** is a list $v_{0}, e_{1}, v_{1}, ..., e_{k}, v_{k}$ of vertices and edges such that, for $1 \leq i \leq k$, the edge $e_{i}$ has endpoints $v_{i-1}$ and $v_{i}$.
 A **trail** is a walk with no repeating edge.
 A **u, v-walk** or **u, v-trail** has first vertex u and last vertex v.
@@ -80,5 +80,13 @@ Let's have a graph $G$ st. $|E(G)| = n$, being only formed of isolated vertices,
 >If n − k is zero or negative, the statement is still true, just trivial, since any graph with at least one vertex has at least 1 component.
 >
 
-[TODO: Page 11/27]
+# Eulerian Graph
 
+>[!note] Definition
+>A graph is **Eulerian** if it has a closed trail containing all edges.
+>
+>We call a closed trail a **circuit** when we do not specifiy the first vertex but keep the list in cyclic order.
+>
+>A **Eulerian circuit** or **Eulerian trail** in a graph is a circuit or trail containing all the edges.
+>
+>An **even graph** is a graph with vertex degrees all even. A vertes is **odd** (resp. **even**) when its degree is odd (resp. even).

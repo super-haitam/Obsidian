@@ -9,7 +9,7 @@ It's discouraging just by looking at it. Why do I always have to ask myself the 
 
 Look, we'll change the approach (idea from a reel i watched this morning btw), instead of caring about *goals* I realistically, might not achieve. Let's do minimums instead. So, rather than saying, I did TD 1, and 2 today, we'll say, I sat in front of the material, focused, actively trying to absorb it for 25 minutes straight. Remove any expectation radically. Thus, with this criterion, I simply cannot belittle my effort, as it doesn't even count. This is, by definition, the requirement and basic minimum when it comes to in form of studying... There is no *enough* no more. And nothing left to judge. Just you, the keyboard, and the material. 😉
 
-Let's start. Timing it with 
+Let's start. Timing it with **Pomofocus**.
 
 # TD1
 (Did ex 1 -  5.)
