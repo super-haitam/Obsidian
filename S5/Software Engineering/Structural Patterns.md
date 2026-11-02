@@ -1,16 +1,10 @@
-I don't get what a **Structural Design Pattern** is... What is a *Design pattern* again ?
-
-> [!note] Definition: Design pattern
-> It's a predefined template made by the "Gang of Four" to standardize and simplify the solution to commonly found problems.
-
-# Structural Patterns
 
 >[!note] Definition
 >They focus on how classes and objects are composed to form larger, flexible, and efficient structures.
 >- **Goal**: Make identifying relationships between entities simpler.
 
 ## Examples
-### Decorator
+### Pattern #1: Decorator
 Imagine you run a coffee shop, with the base `Coffee`. Users have the choice between a number of toppings `Milk`, `Whip`, `Mocha`... but what about multiple at once ?
 - **Without Decorator**: The only way for it to work is to create a class for each combination `SimpleCoffee`, `MilkCoffee`, `WhipCoffee`, `MilkAndWhipCoffee`, `MochaAndMilkCoffee`... 
   Leading to *class explosion* (Many classes that have minimal difference in logic).
@@ -140,7 +134,7 @@ public class CoffeeShopApp {
 }
 ```
 
-### Composite
+### Pattern #2: Composite
 The **Composite Pattern** is a structural design pattern that lets you compose objects into tree structures to represent *part-whole hierarchies*.
 	**Part-whole hierarchy**: A structure where complex objects (wholes) are composed of simpler objects (parts) that can themselves contain further parts. Just like a FileFolderSystem, where a Folder can both be whole to a File and part of another Folder.
 #### The Classic Analogy

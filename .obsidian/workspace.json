@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "76a4b762e3aeae25",
+        "id": "7e127ce5f7e504c3",
         "type": "tabs",
         "children": [
           {
-            "id": "e67e5faf50fe1c2a",
+            "id": "3c3e63a4776039b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "S5/Software Engineering/Structural & Behavioral Patterns.md",
+                "file": "S5/Software Engineering/Lab 5 - Design Patterns (Part 2).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Structural & Behavioral Patterns"
+              "title": "Lab 5 - Design Patterns (Part 2)"
+            }
+          },
+          {
+            "id": "e3ed4dc54bd872cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "S5/Software Engineering/Structural Patterns.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Structural Patterns"
+            }
+          },
+          {
+            "id": "5e9134742cc4022a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "S5/Software Engineering/Behavioral Patterns.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Behavioral Patterns"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -55,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Composite",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,7 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 213.5,
+    "width": 246.5,
     "collapsed": true
   },
   "right": {
@@ -189,17 +218,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "e67e5faf50fe1c2a",
+  "active": "5e9134742cc4022a",
   "lastOpenFiles": [
+    "S5/Software Engineering/Structural Patterns.md",
+    "S5/Software Engineering/Behavioral Patterns.md",
+    "S5/Software Engineering/Definitions.md",
     "S5/Software Engineering/Lab 5 - Design Patterns (Part 2).md",
-    "S5/Software Engineering/Structural & Behavioral Patterns.md",
+    "S5/Software Engineering/Class Diagram.md",
+    "S5/Graph/Midterm/3 Days Left.md",
+    "Welcome.md",
     "S5/Graph/Graph Theory.md",
     "S5/Automata/The Mighty Pepper.md",
     "S5/Software Engineering/Untitled",
-    "S5/Software Engineering/Class Diagram.md",
     "S5/Software Engineering",
     "S5/Graph/Midterm/2 Days Left.md",
-    "S5/Graph/Midterm/3 Days Left.md",
     "file:C:/Users/Student/Downloads/solid-lab_HaitamLaghmam/solid-lab/parking-answers.md",
     "file:C:/Users/Student/Downloads/solid-lab with parking/solid-lab/parking-answers.md",
     "file:C:/Users/Student/Downloads/solid-lab with parking/solid-lab/answers.md",
@@ -221,7 +253,6 @@
     "Sans titre.md",
     "S5/Automata",
     "S5",
-    "Welcome.md",
     "Untitled.canvas",
     "Untitled.md",
     "2026-10-05.md",

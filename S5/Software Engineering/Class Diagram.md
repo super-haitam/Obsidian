@@ -1,5 +1,4 @@
 
-
 ![[Pasted image 20261005235004.png]]
 
 ### Description
