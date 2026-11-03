@@ -1,3 +1,7 @@
+## Deliverables
+You will find the whole project with the `problem1before` and `problem1after` in the github link: https://github.com/super-haitam/lab4, the table is below, as well as the class diagram in PNG format. This file covers the answers to the questions. Thank you!!
+
+---
 # Problem
 **1.** The Test class has exactly the same output as shown.
 
@@ -41,10 +45,26 @@ All of the straightforward solutions to these problems violate the *Open/Closed 
 ![[Composite.png]]
 
 The final class diagram:
-![[Pasted image 20261103162058.png]]
+![[Class Diagram.png]]
 
 The repeating classes are:
 - **MenuItem**: both in Decorator and Composite.
 - **Order**: both in State and Observer.
 
-**5.**
+**5.** See the Code part.
+
+**6.** The outermost object is Spicy as it's the last word in the name is "Tacos + cheese + spicy".
+
+**7.** A combo can contain a dish with cheese because it is an instance of `MenuItem` which is what combo allows in its internal structure, wraping it in `Cheese` would add 5 to its price.
+Well, technically, as *studentMenu* would be of type Combo (an implementation of MenuItem), then it would be possible, although it doesn't make sense for the restaurant.
+
+**8.** What we'll do:
+- create a new class Sauce with name "sauce" and price 3, as for the double cheese, with our current implementation, the user can add even triple cheese and it would be fine, which doesn't seem to be prohibited by the specifications either.
+- a family menu can be done by the client without any change of code, just create a combo that contains a combo and a dish, that's all, the code handles the discount.
+- for the new READY status, we'd only need to add a method to Order as well as create a new ReadyState as well, i don't think the prohibition of cancelling under ready state makes sense as it is the default, it probably was difficult before the refactoring, also the first change might violate Open/Closed but I don't think there is much we can do as it is core to the logic of Order.
+- adding a loyalty service works the same for KitchenScreen and CustomerSms, one line. switching off is just one method away.
+
+**9.**
+**Singleton for KitchenScreen: no.** A Singleton means only one object can ever exist. But a restaurant could have more than one kitchen screen, and our Observer pattern already handles that, because any screen can just subscribe. A Singleton would only make the code harder to change and test.
+
+**Builder for Order: no.** A Builder is for objects that need lots of settings when you create them. Our `Order` only needs one thing, the customer name, so a Builder would just add extra classes for nothing. Keeping the design simple is better.
